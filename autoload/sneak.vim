@@ -34,10 +34,6 @@ endf
 func! sneak#wrap(op, inputlen, reverse, inclusive, label) abort
   let save_cmdheight = &cmdheight
   try
-    if &cmdheight < 1
-      set cmdheight=1
-    endif
-
     let [cnt, reg] = [v:count1, v:register] "get count and register before doing _anything_, else they get overwritten.
     let is_similar_invocation = a:inputlen == s:st.inputlen && a:inclusive == s:st.inclusive
 
