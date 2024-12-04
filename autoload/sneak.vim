@@ -295,7 +295,6 @@ func! s:getnchars(n, mode) abort
         break
       endif
     endif
-    redraw | echo g:sneak_opt.prompt . s
   endfor
   return s
 endf
